@@ -1,0 +1,34 @@
+name: Code quality
+
+on: 'push'
+
+jobs:
+  code-quality:
+    name: Lint source code
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+
+    - name: Setup Node
+      uses: actions/setup-node@v1
+      with:
+        node-version: '12.1'
+
+    - name: Cache dependencies
+      uses: actions/cache@v1
+      with:
+        path: ./node_modules
+        key: ${{ runner.OS }}-api-deps-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.OS }}-api-deps-${{ env.cache-name }}-
+          ${{ runner.OS }}-api-deps-
+          ${{ runner.OS }}-
+
+    - name: Install API dependencies
+      run: |
+        npm install
+
+    - name: Lint API files
+      run: |
+        npm run lint
+        

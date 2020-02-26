@@ -14,6 +14,7 @@
   },
   "scripts": {
     "test": "test",
+    "lint": "npm run lint:js && npm run lint:scss",
     "lint:js": "eslint '**/*.js' --ignore-pattern node_modules/",
     "lint:js:fix": "eslint '**/*.js' --ignore-pattern node_modules/ --fix",
     "lint:scss": "stylelint '**/*.scss' --syntax scss -f verbose --color",
