@@ -24,11 +24,11 @@ jobs:
           ${{ runner.OS }}-api-deps-
           ${{ runner.OS }}-
 
-    - name: Install API dependencies
+    - name: Install dependencies
       run: |
         npm install
 
-    - name: Lint API files
+    - name: Lint files
       run: |
         npm run lint
         
