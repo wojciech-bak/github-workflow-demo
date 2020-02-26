@@ -1,0 +1,32 @@
+{
+  "name": "github-workflow-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "stylelint": "^13.2.0",
+    "stylelint-config-standard": "^20.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.20.1"
+  },
+  "scripts": {
+    "test": "test",
+    "lint:js": "eslint '**/*.js' --ignore-pattern node_modules/",
+    "lint:js:fix": "eslint '**/*.js' --ignore-pattern node_modules/ --fix",
+    "lint:scss": "stylelint '**/*.scss' --syntax scss -f verbose --color",
+    "lint:scss:fix": "stylelint '**/*.scss' --syntax scss --fix -f verbose --color"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wojciech-bak/github-workflow-demo.git"
+  },
+  "author": "Wojciech Bąk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wojciech-bak/github-workflow-demo/issues"
+  },
+  "homepage": "https://github.com/wojciech-bak/github-workflow-demo#readme"
+}
