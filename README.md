@@ -58,7 +58,6 @@ Right now, the only missing thing is some NPM script (or scripts) declared in `p
 
 ```json
 "scripts": {
-    ...
     "lint:scss": "stylelint '**/*.scss' --syntax scss -f verbose --color",
     "lint:scss:fix": "stylelint '**/*.scss' --syntax scss --fix -f verbose —color"
 }
@@ -143,7 +142,6 @@ If it's done, ESlint config file (e.g. `.eslintrc.json`, depending on what you'v
 Now we have to define scripts in `package.json` file, same as for SCSS files:
  ```json
  "scripts": {
-     ...
     "lint:js": "eslint '**/*.js' --ignore-pattern node_modules/",
     "lint:js:fix": "eslint '**/*.js' --ignore-pattern node_modules/ --fix"
  }
@@ -229,7 +227,6 @@ GitHub provides all environment stuff we need. In the last line we're running co
 
 ```json
 "scripts": {
-    ...
     "lint": "npm run lint:js && npm run lint:scss"
 }
 ```
